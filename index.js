@@ -5,6 +5,8 @@ const dotenv = require("dotenv");
 const userRoute =require("./routes/Users")
 const authRoute = require("./routes/auth")
 const productRoute= require("./routes/Product")
+const cartRoute= require("./routes/Cart")
+const orderRoute= require("./routes/Order")
 
 
 
@@ -28,8 +30,10 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
+app.use("/api/cart", cartRoute);
+app.use("/api/order", orderRoute);
 
-
+// 
 // server start om port
 app.listen(process.env.PORT||4000,()=> {
     console.log("server is up and running")
