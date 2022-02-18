@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const dotenv = require("dotenv");
 const userRoute =require("./routes/Users")
 const authRoute = require("./routes/auth")
+const productRoute= require("./routes/Product")
 
 
 
@@ -26,6 +27,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/products", productRoute);
 
 
 // server start om port
